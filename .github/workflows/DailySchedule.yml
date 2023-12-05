@@ -1,4 +1,4 @@
-name: Weekly Schedule Cron
+name: Daily Schedule Cron
 
 on:
   schedule:
