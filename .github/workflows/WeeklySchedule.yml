@@ -2,7 +2,7 @@ name: Weekly Schedule Cron
 
 on:
   schedule:
-    - cron: 20 8 * * mon
+    - cron: 20 23 * * sun
 
 jobs:
   monthly_cron:

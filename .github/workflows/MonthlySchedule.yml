@@ -2,7 +2,7 @@ name: Monthly Schedule Cron
 
 on:
   schedule:
-    - cron: 20 8 1 * *
+    - cron: 0 0 1 * *
 
 jobs:
   monthly_cron:
