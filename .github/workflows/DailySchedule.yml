@@ -17,6 +17,11 @@ jobs:
         with:
           python-version: 3.x
 
+      - name: Setup Dotenv
+        run: |
+          touch ./Notifier/.env
+          echo "${{ secrets.DOT_ENV }}" > ./Notifier/.env
+
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get install -y build-essential libffi-dev
 
