@@ -16,4 +16,4 @@ def fetch_monthly_school_schedule():
 
 res = fetch_monthly_school_schedule()
 schedule_string = json_to_school_schedule_string(res.json())
-send_webhook(title="이번주 학사일정", content=schedule_string)
+send_webhook(title=f"{datetime.today().month}월 학사일정", content=schedule_string)
