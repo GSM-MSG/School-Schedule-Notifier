@@ -5,7 +5,7 @@ on:
     - cron: 20 23 * * sun
 
 jobs:
-  monthly_cron:
+  weekly_cron:
     runs-on: ubuntu-latest
 
     steps:
