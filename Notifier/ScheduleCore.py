@@ -6,7 +6,9 @@ import requests
 import os
 
 load_dotenv()
-datetime.now(timezone('Asia/Seoul'))
+
+def get_today():
+  return datetime.now(timezone('Asia/Seoul'))
 
 def send_webhook(title: str, content: str):
   webhookURL = os.getenv("WEBHOOK")
@@ -56,3 +58,5 @@ def json_to_school_schedule_string(json):
     event_date = date.fromisoformat(value['AA_YMD'])
     result += f"{value['AA_YMD'][-2:]} {weekday_dict[event_date.weekday()]} - {value['EVENT_NM']}\n"
   return result
+
+print(get_today())

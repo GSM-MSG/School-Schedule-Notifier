@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
 from dateutil.relativedelta import *
-from ScheduleCore import send_webhook, fetch_school_schedule, json_to_school_schedule_string
+from ScheduleCore import get_today, send_webhook, fetch_school_schedule, json_to_school_schedule_string
 
 def fetch_weekly_school_schedule():
-  today = datetime.today()
+  today = get_today()
   current_weekday = today.weekday()
 
   days_until_monday = (current_weekday + 1) % 7
